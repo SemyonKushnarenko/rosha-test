@@ -30,7 +30,7 @@ function App() {
       <TableDescription />
       <TableComponent mode={mode} />
       <Button onClick={onToggleMode}>
-        Редактировать
+        {tg?.initDataUnsafe?.user?.username}
       </Button>
     </main>
   )
