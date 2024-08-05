@@ -30,7 +30,7 @@ const TableComponent: FC<ITableProps> = ({mode}) => {
             const table = new Array(Math.ceil(Math.random() * (randomRows - 1) + 1)).fill(null).map((_, index) => {
                 const row = [];
                 for (let index = 0; index < numberOfCols; index++) {
-                    row.push(Math.random() > 0.5)
+                    row.push(Math.random() > 0.5 && lastRowId > -123 && !!mode)
                 }
                 return {rowId: index + 1, row};
             })

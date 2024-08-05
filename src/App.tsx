@@ -13,7 +13,7 @@ function App() {
     setMode(mode === 'edit' ? 'normal' : 'edit')
   }
   return (
-    <>
+    <main className='rosha-main'>
       <AnimatedCursor
         innerSize={9}
         outerSize={40}
@@ -27,8 +27,8 @@ function App() {
       <TableComponent mode={mode} />
       <Button onClick={onToggleMode}>
         Редактировать
-      <Button />
-    </>
+      </Button>
+    </main>
   )
 }
 
