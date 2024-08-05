@@ -3,7 +3,7 @@ import AnimatedCursor from 'react-animated-cursor';
 import TableComponent from './shared/components/Table/TableComponent';
 import TableDescription from './shared/components/Table/TableDescription';
 import Button from './shared/components/Button/Button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useTelegram from './hooks/useTelegram';
 
 type TMode = 'edit' | 'normal'
@@ -13,6 +13,10 @@ function App() {
   const onToggleMode = () => {
     setMode(mode === 'edit' ? 'normal' : 'edit')
   }
+
+  useEffect(() => {
+    tg.ready();
+  }, [])
 
   const { tg } = useTelegram();
   console.log(tg)

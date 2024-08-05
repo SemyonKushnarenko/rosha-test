@@ -1,5 +1,5 @@
 export default function useTelegram() {
     return {
-        tg: window.Telegram.WebApp,
+        tg: window.Telegram?.WebApp,
     }
 }
