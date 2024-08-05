@@ -4,6 +4,7 @@ import TableComponent from './shared/components/Table/TableComponent';
 import TableDescription from './shared/components/Table/TableDescription';
 import Button from './shared/components/Button/Button';
 import { useState } from 'react';
+import useTelegram from './hooks/useTelegram';
 
 type TMode = 'edit' | 'normal'
 
@@ -12,6 +13,9 @@ function App() {
   const onToggleMode = () => {
     setMode(mode === 'edit' ? 'normal' : 'edit')
   }
+
+  const { tg } = useTelegram();
+  console.log(tg)
   return (
     <main className='rosha-main'>
       <AnimatedCursor
